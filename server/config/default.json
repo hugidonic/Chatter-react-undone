@@ -1,0 +1,5 @@
+{
+	"PORT": 5000,
+	"secretJwt": "vodemGod",
+	"mongoUri": "mongodb+srv://admin:admin123@cluster0.ud5uh.azure.mongodb.net/Cluster0?retryWrites=true&w=majority"
+}

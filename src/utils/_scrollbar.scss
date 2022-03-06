@@ -1,0 +1,29 @@
+@import './vars';
+
+/* ===================SCROLL BAR======================== */
+::-webkit-scrollbar {
+	width: 7px;
+}
+::-webkit-scrollbar-button {
+	height: 0;
+}
+::-webkit-scrollbar-track {
+	background-color: #999;
+}
+::-webkit-scrollbar-track-piece {
+	background-color: $black-2;
+}
+::-webkit-scrollbar-thumb {
+	height: 30px;
+	background-color: $lightGrey;
+}
+::-webkit-scrollbar-corner {
+	height: 0;
+}
+
+@media screen and (max-width: 500px) {
+	::-webkit-scrollbar {
+		width: 0;
+	}
+}
+

@@ -1,0 +1,105 @@
+@import '../../utils/vars';
+
+.userChats {
+	background-color: $black-1;
+	box-shadow: 3px 0px 20px 0px $black-3;
+	z-index: 1;
+	height: 100%;
+	min-width: 0;
+	width: 40%;
+	overflow: hidden;
+
+	transition: .5s;
+	margin-left: -40%;
+
+	&.nav-active {
+		margin-left: 0;
+		min-width: 400px;
+		top: 0;
+		left: 115px;
+	}
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@media screen and (max-width: 1250px) {
+		&.nav-active {
+			min-width: 500px;
+		}
+	}
+
+	@media screen and (max-width: 850px) {
+		&.nav-active {
+			left: 100px;
+		}
+	}
+	@media screen and (max-width: 700px) {
+		&.nav-active {
+			left: 90px;
+			min-width: 80%;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		margin-left: 0;
+		bottom: 0;
+		top: 100%;
+		min-width: 100%;
+		width: 100%;
+		height: calc(100% - 70px);
+		&.nav-active {
+			left: 0;
+			min-width: 100%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.chats {
+	height: calc(100% - 85px);
+	overflow-y: auto;
+}
+
+.allUsersBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+	background-color: $primary;
+
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	z-index: 80;
+
+	width: 60px;
+	height: 60px;
+
+	&:active {
+		transform: scale(0.9);
+		transition: transform .2s;
+	}
+
+	.plus {
+		width: 40%;
+		height: 3px;
+		background-color: #fff;
+		border-radius: 5px;
+
+		&::after {
+			content: '';
+			display: block;
+
+			height: 40%;
+			width: 3px;
+			background-color: #fff;
+			border-radius: 5px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import '../../utils/vars';
+
+.inputbarContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 20px;
+	background-color: $black-2;
+}
+
+.inputbar {
+	width: calc(100% - 120px);
+	height: 50px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: $lightGrey;
+	border-radius: 5px;
+
+	font-size: 17px;
+	letter-spacing: 1px;
+	color: $white;
+}
+
+@media screen and (max-width: 600px) {
+	.inputbarContainer {
+		padding: 20px 15px;
+	}
+	
+	.inputbar {
+		width: 75%;
+		height: 60px;
+		padding: 10px 20px;
+		font-size: 15px;
+	}
+}

@@ -1,0 +1,65 @@
+@import '../../../utils/vars';
+
+.messageContainer {
+	display: flex;
+	flex-direction: column;
+	margin: 15px 20px;
+
+	&.currentUser .messageBox {
+		background-color: $primary;
+		text-align: right;
+		color: $black-2;
+	}
+}
+
+.messageBox {
+	text-align: left;
+	padding: 10px 15px ;
+	background-color: $lightGrey;
+	border-radius: 6px;
+	
+	max-width: 46%;
+	width: max-content;
+	
+	color: $white;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.timeAgo {
+	margin: 0 auto;
+	
+	background-color: darken($white, $amount: 10%);
+	border: 1px solid darken($white, $amount: 60%);
+	font-size: 15px;
+	opacity: 0.5;
+	padding: 4px 12px;
+	border-radius: 50px;
+}
+
+.dateTime {
+	color: #dbdbdb;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+	.messageBox {
+		padding: 10px 12px ;
+	}	
+}
+@media screen and (max-width: 700px) {
+	.messageBox {
+		font-size: 14px;
+		max-width: 90%;
+
+	}
+}
+
+.justifyStart {
+	align-items: flex-start;
+}
+
+.justifyEnd {
+	align-items: flex-end;
+}

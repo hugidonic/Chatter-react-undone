@@ -1,0 +1,198 @@
+@import '../../utils/vars';
+
+.userProfileOuter {
+	height: 100%;
+	width: 100%;
+}
+
+.userProfile {
+	height: 100%;
+	// .userProfile__upper
+	&__upper {
+		height: 280px; 
+		background: url(../../images/profileBg1.jpg) no-repeat left center / cover;
+		padding: 35px 60px;
+		display: flex;
+
+		.upperInner {
+			text-align: center;
+		}
+
+		h2 {
+			margin-top: 12px;
+			font-weight: 300;
+			font-size: 26px;
+			color: $white;
+		}
+	}
+
+	// .userProfile__lower
+	&__lower {
+		height: calc(100% - 280px);
+	}
+}
+
+.box {
+	background-color: $grey;
+	border-radius: 15px;
+	padding: 25px 40px;
+	position: relative;
+
+	.stats {
+		margin-top: 10px;
+		margin-left: 15px;
+
+		li {
+			font-size: 16px;
+			line-height: 1.5;
+			color: darken($white, $amount: 10%);
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 300;
+		color: lighten($white, $amount: 10%);
+	}
+}
+
+.lower {
+	padding: 40px;
+	display: flex;
+	justify-content: space-between;
+
+	// .lower__left
+	&__left {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: calc(100% - 390px);
+	}
+
+	// .lower__right
+	&__right {
+		padding: 25px 10px !important;
+		max-width: 350px;
+		width: 90%;
+		.box__title {
+			margin-left: 30px;
+		}
+	}
+}
+
+.currUser {
+	color: #ffffff;
+	font-size: 25px;
+	text-align: center;
+	border: 1px solid red;
+	
+}
+
+.friendsList {
+	flex: auto;
+	overflow: auto;
+}
+
+.left {
+	&__upper, 
+	&__lower {
+		height: calc(50% - 20px);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.lower {
+		padding: 30px;
+		// .lower__left
+		&__left {
+			width: calc(100% - 390px);
+		}
+		// .lower__right
+		&__right {
+			padding: 20px 10px !important;
+			.box__title {
+				margin-left: 10px;
+			}
+		}
+	}
+	.box {
+		padding: 20px;
+	}	
+}
+
+@media screen and (max-width: 1000px) {
+	.lower {
+		// .lower__left
+		&__left {
+			width: calc(100% - 330px);
+		}
+	
+		// .lower__right
+		&__right {
+			max-width: 290px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.userProfile {
+		// .userProfile__upper
+		&__upper {
+			background-position: 30% top;
+			h2 {
+				font-size: 24px;
+			}
+		}
+	}
+	
+	.lower {
+		flex-direction: column;
+		justify-content: space-between;
+
+		flex: auto;
+		overflow: auto;
+
+		&__left,
+		&__right {
+			width: 100%;
+			height: auto;
+		}
+		&__right {
+			max-width: 100%;
+		}
+	}
+
+	.userProfile {
+		height: unset;
+	}
+
+	.userProfileOuter{
+		flex: auto;
+		overflow-y: scroll;
+	}
+
+	.box {
+		margin-bottom: 20px;
+		.stats {
+			margin-top: 5px;
+			margin-left: 10px;
+
+			li {
+				font-size: 15px;
+				line-height: 1.4;
+			}
+		}
+	
+		&__title {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.userProfile__upper {
+		justify-content: center;
+	}
+}

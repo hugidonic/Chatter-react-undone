@@ -1,0 +1,35 @@
+@import '../../utils/vars';
+.allUsers {
+	height: 100%;
+	width: 100%;
+	
+	display: flex;
+	justify-content: space-between;
+	background-color: $black-1;
+	
+	// .allUsers__left
+	&__left {
+		border-right: 2px solid $lightGrey;
+		width: 50%;
+		position: relative;
+	}
+
+	// .allUsers__right
+	&__right {
+		width: 50%;
+		position: relative;
+
+	}
+}
+.userList {
+	height: calc(100% - 85px);
+	overflow-y: auto;
+
+	// .userList__title
+	&__title {
+		padding: 30px 35px;
+		font-size: 18px;
+		color: $white;
+		font-weight: 300;
+	}
+}
